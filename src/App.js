@@ -14,11 +14,11 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      apikey: "e7777f58d38843bfb723d19592c4dd05",
+      apikey: "8a7df83b7ea34b83a12af869d6a1d447",
       language: 'en',
       mode: 'dark',
       scrollTop:'',
-      postperpage: '15',
+      postperpage: '10',
       country: ['in']
     }
     

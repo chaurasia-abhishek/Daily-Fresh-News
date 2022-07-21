@@ -14,7 +14,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      apikey: "8a7df83b7ea34b83a12af869d6a1d447",
+      apikey: "8c794a600b764c3e9a54a23e3eebaef9", //enter api key here from newsapi.org
       language: 'en',
       mode: 'dark',
       scrollTop:'',

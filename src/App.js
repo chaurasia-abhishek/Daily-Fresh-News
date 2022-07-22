@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Newsitems from './components/Newsitems'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import About from './components/About'
+import Apikey from './Apikey.json'
 export default class App extends Component {
   changevar = async (object) => {
     this.setState({ [object.value]: object.key });
@@ -14,7 +15,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      apikey: "Sjb8b49vIQsCeGPOx-IDpbP_bPSFLypxNlKqI3fWzZI", //enter api key here from newscatcherapi.com
+      apikey: Apikey.key1, //enter api key here from newscatcherapi.com
       language: 'en',
       mode: 'dark',
       scrollTop: '',

@@ -7,15 +7,16 @@ import LoadingBar from 'react-top-loading-bar'
 export default class Newsitems extends Component {
 
     async componentDidMount() {
+        this.setState({ loading: true })
         this.setState({ progress: '30' });
         let url = `https://api.newscatcherapi.com/v2/latest_headlines?countries=${this.state.country}&topic=${this.state.category}&lang=${this.state.language}&page=${this.state.page}&page_size=${this.state.postperpage}`
         this.setState({ progress: '50' });
-        (this.setState({ progress: '70' }))
         let data = await fetch(url, { method: 'get', headers: { 'x-api-key': `${this.props.var.apikey}` } })
+        this.setState({ progress: '70' });
         let parseddata = await data.json();
         this.setState({ progress: '90' });
-        this.setState({ articles3: parseddata.articles, totalpages: parseddata.total_pages})
-        this.setState({ progress: '100' });
+        this.setState({ loading: false })
+        this.setState({ articles3: parseddata.articles, totalpages: parseddata.total_pages, progress: '100' })
     }
     constructor(props) {
         super();
@@ -47,7 +48,8 @@ export default class Newsitems extends Component {
             postperpage: props.var.postperpage,
             category: props.category,
             progress: 0,
-            mode: props.var.mode
+            mode: props.var.mode,
+            loading: false
         }
 
         document.title = `${this.uppercase(this.state.category)} | Daily-Fresh-News`
@@ -59,7 +61,6 @@ export default class Newsitems extends Component {
         await this.setState({ [object.value]: object.key, page: 1 });
         this.componentDidMount();
         this.props.changevar(object)
-
     };
 
     fetchMoreData = async () => {
@@ -74,6 +75,15 @@ export default class Newsitems extends Component {
     }
 
     render() {
+        let navitems1234 = document.querySelectorAll('#navbarSupportedContent>ul>li,#navbarSupportedContent>div input,label')
+        let navbartoggle1234 = document.getElementById('navbarSupportedContent')
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            navitems1234.forEach((Element) => {
+                Element.addEventListener('click', () => {
+                    navbartoggle1234.classList.remove('show')
+                })
+            })
+        }
         return (
             <>
                 <LoadingBar
@@ -94,8 +104,9 @@ export default class Newsitems extends Component {
                         <option value="hi">Hindi</option>
                     </select>
                 </div>
-                <InfiniteScroll
-                    dataLength={this.state.articles3.length ? this.state.articles3.length : 1}
+                {this.state.loading && <Loading />}
+                {!this.state.loading && <InfiniteScroll
+                    dataLength={this.state.articles3.length}
                     next={this.fetchMoreData}
                     hasMore={this.state.page + 1 < this.state.totalpages}
                     loader={<Loading />}
@@ -109,7 +120,7 @@ export default class Newsitems extends Component {
                             })}
                         </div>
                     </div>
-                </InfiniteScroll    >
+                </InfiniteScroll>}
             </>
         )
     }

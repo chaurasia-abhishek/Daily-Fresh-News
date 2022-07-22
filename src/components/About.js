@@ -13,7 +13,7 @@ export default class About extends Component {
                     </h2>
                     <div id="collapseOne" className={`accordion-collapse collapse show text-${mode === 'light' ? 'dark' : 'light'}`} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div className={`accordion-body text-${mode === 'light' ? 'dark' : 'light'}`}>
-                            <strong>Daily-Fresh-News</strong> is a website a open source news website latest news around the gloab.
+                            <strong>Daily-Fresh-News</strong> is a website a open source news website latest news around the globe.
                         </div>
                     </div>
                 </div>
@@ -28,16 +28,23 @@ export default class About extends Component {
                     </h2>
                     <div id="collapseTwo" className={`accordion-collapse collapse text-${mode === 'light' ? 'dark' : 'light'}`} aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div className={`accordion-body text-${mode === 'light' ? 'dark' : 'light'}`}>
-                            <strong>Daily-Fresh-News</strong> provides news on different categories like 
-                             <Link to="/General">  General</Link>,
-                             <Link to="/business">  Business</Link>,
-                             <Link to="/entertainment">  Entertainment</Link>,
-                             <Link to="/general">  General</Link>,
-                             <Link to="/health">  Health</Link>,
-                             <Link to="/science">  Science</Link>,
-                             <Link to="/sports">  Sports</Link>,
-                             <Link to="/technology">  Technology </Link>
-                             Available for countries.
+                            <strong>Daily-Fresh-News</strong> provides news on different categories like
+                            <Link to="/news"> NEWS </Link>,
+                            <Link to="/sport">SPORT </Link>,
+                            <Link to="/tech">TECH </Link>,
+                            <Link to="/world">WORLD </Link>,
+                            <Link to="/finance">FINANCE </Link>,
+                            <Link to="/politics">POLITICS </Link>,
+                            <Link to="/business">BUSINESS </Link>,
+                            <Link to="/economics">ECONOMICS </Link>,
+                            <Link to="/entertainment">ENTERTAINMENT </Link>,
+                            <Link to="/beauty">BEAUTY </Link>,
+                            <Link to="/travel">TRAVEL </Link>,
+                            <Link to="/music">MUSIC </Link>,
+                            <Link to="/food">FOOD </Link>,
+                            <Link to="/science">SCIENCE </Link>,
+                            <Link to="/energy">ENERGY </Link>
+                            Available in many language for various countries.
                         </div >
                     </div >
                 </div >
@@ -51,7 +58,7 @@ export default class About extends Component {
                     </h2>
                     <div id="collapseThree" className={`accordion-collapse collapse text-${mode === 'light' ? 'dark' : 'light'}`} aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className={`accordion-body text-${mode === 'light' ? 'dark' : 'light'}`}>
-                            <strong>Daily-Fresh-News</strong> is a news website that work on the api provide by <strong>newsapi.org</strong>.
+                            <strong>Daily-Fresh-News</strong> is a news website that work on the api provide by <strong>newscatcherapi.com</strong>.
                         </div>
                     </div>
                 </div>

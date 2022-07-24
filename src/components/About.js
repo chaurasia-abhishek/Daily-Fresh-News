@@ -28,7 +28,7 @@ export default class About extends Component {
                     </h2>
                     <div id="collapseTwo" className={`accordion-collapse collapse text-${mode === 'light' ? 'dark' : 'light'}`} aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div className={`accordion-body text-${mode === 'light' ? 'dark' : 'light'}`}>
-                            <strong>Daily-Fresh-News</strong> provides news on different categories like 
+                            <strong>Play-with-Texts</strong> provides news on different categories like 
                              <Link to="/General">  General</Link>,
                              <Link to="/business">  Business</Link>,
                              <Link to="/entertainment">  Entertainment</Link>,
@@ -51,7 +51,7 @@ export default class About extends Component {
                     </h2>
                     <div id="collapseThree" className={`accordion-collapse collapse text-${mode === 'light' ? 'dark' : 'light'}`} aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className={`accordion-body text-${mode === 'light' ? 'dark' : 'light'}`}>
-                            <strong>Daily-Fresh-News</strong> is a news website that work on the api provide by <strong>newsapi.org</strong>.
+                            <strong>Play-with-Texts</strong> is a news website that work on the api provide by <strong>newsapi.org</strong>.
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-live link of the project : http://52.41.128.88:88/news
+live link of the project : http://52.41.128.88/news
 this is my second react project. Daily-fresh-news is a onle page web.
 I use newscatcherapi.com as news source api with the help of Bootstrap.
 Daily-Fresh-News provides news on different categories like 

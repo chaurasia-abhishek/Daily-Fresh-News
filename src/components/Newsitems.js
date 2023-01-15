@@ -105,7 +105,7 @@ export default class Newsitems extends Component {
                     </select>
                 </div>
                 {this.state.loading && <Loading />}
-                {!this.state.loading && <InfiniteScroll
+                {!this.state.loading && this.state.articles3.length && <InfiniteScroll
                     dataLength={this.state.articles3.length}
                     next={this.fetchMoreData}
                     hasMore={this.state.page + 1 < this.state.totalpages}
